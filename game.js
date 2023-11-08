@@ -6,7 +6,7 @@ class Game {
     this.startScreen = document.getElementById("intro-screen");
     this.gameScreen = document.getElementById("train-carriage");
     this.gameOverScreen = document.getElementById("game-over");
-
+    // sss
     this.player = new Player(
       this.gameScreen,
       100,
