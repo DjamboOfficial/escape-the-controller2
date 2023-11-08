@@ -15,6 +15,7 @@ class Game {
       50,
       "/images/mainCharacter.png"
     );
+    // --
     this.controller = new Controller(this.gameScreen, this.player);
     this.seatsL = document.querySelector(".seats-left");
     this.seatsR = document.querySelector(".seats-right");
