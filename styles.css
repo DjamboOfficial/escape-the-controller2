@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+/* Screens' sizes */
+
+#intro-screen,
+#screen1victory,
+#game-screen,
+#betrayed-by-people,
+#got-caught,
+#game-over {
+  height: calc(100vw * (9 / 16));
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+}
+
+#intro-screen {
+  background-image: url(/images/start-screen.png);
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+#betrayed-by-people {
+  background-image: url(/images/betrayed-by-people.png);
+  background-size: cover;
+}
+
+#got-caught {
+  background-image: url(/images/controller-found-you.png);
+  background-size: cover;
+}
+
+#screen1victory {
+  background-image: url(/images/he-shares.png);
+  display: flex;
+}
+
+/* Intro-screen scene */
+
+#intro-screen > button {
+  height: 50px;
+  width: 250px;
+}
+
+/* Game-screen scene */
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(1px);
+  }
+  50% {
+    transform: translateX(-1px);
+  }
+  75% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#game-screen {
+  position: absolute;
+  background-image: url(/images/game-screen.png);
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+
+#train-carriage {
+  position: relative;
+  border-radius: 50px;
+  margin-left: 50%;
+  width: 300px;
+  height: 600px;
+  background-color: #7d9267;
+  border: 1px solid black;
+  animation: horizontal-shaking 0.35s infinite;
+}
+
+/* Seats' div */
+
+.seats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.seats-left {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 50px;
+  gap: 10px;
+  background-color: #657b50;
+}
+
+.seats-right {
+  margin-left: 180px;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 50px;
+  gap: 10px;
+  background-color: #657b50;
+}
+
+.seats-left .seat:nth-child(8n) {
+  background-color: #657b50;
+  border-left: 5px solid black;
+}
+
+.seats-right .seat:nth-child(5n) {
+  background-color: #657b50;
+  border-right: 5px solid black;
+  margin-right: 5px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  background-color: #03211c;
+  overflow: hidden;
+}
+
+/* Seats' div END */
+
+#game-screen > #story-box {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 35px;
+  color: white;
+}
+
+#game-screen > #level {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 35px;
+  color: white;
+}
+
+/* Game-over scene */
+
+#game-over {
+  background-image: url(/images/game-over.001.png);
+  display: flex;
+  flex-direction: column;
+}
+
+#game-over > p {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+#game-over > button {
+  height: 50px;
+  width: 200px;
+}
+
+#game-over > p {
+  width: auto;
+  height: auto;
+  margin-left: 10%;
+  font-size: 50px;
+}
+
+.controller {
+  display: none;
+}
+
+/* Buttons */
+
+button {
+  width: calc(100% / 20);
+  border: none;
+  color: black;
+  background: yellow;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50px;
+}
+
+#restart-button {
+  left: 40%;
+  margin-top: 20%;
+}

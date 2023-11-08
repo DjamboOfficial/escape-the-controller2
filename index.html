@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escape the controller</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <audio loop src="/sounds/intro-sound.mp3" autoplay></audio>
+      <div id="intro-screen">
+        
+        
+        <br />
+        <button id="start-button">Hop on the train anyway</button>
+      </div>
+
+      <div id="game-screen">
+        <p id="level">Level 1</p>
+        <p id="story-box">We are in an isolated station: you'll be fine. <br>Controllers never come here...</p>
+        <div id="train-carriage">
+          <div class="seats">
+            <div class="seats-left">
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+            </div>
+      
+            <div class="seats-right">
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+              <div class="seat"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        
+      
+
+      <div id="betrayed-by-people"> 
+      </div>
+
+      <div id="got-caught">
+      </div>
+
+      <div id="game-over">
+        <p id="game-over-message">It wasn't supposed to end up like this.</p>
+        <br />
+        <button id="restart-button">Try again</button>
+      </div>
+      <div id="screen1victory">
+      </div>
+
+    </main>
+    
+    <script type="text/javascript" src="/player.js"></script>
+    <script type="text/javascript" src="/npcs.js"></script>
+    <script type="text/javascript" src="/controller.js"></script>
+    <script type="text/javascript" src="/game.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
+  </body>
+</html>
